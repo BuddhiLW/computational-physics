@@ -1,10 +1,9 @@
 # symbols
 
-A Clojure library designed to ... well, that part is up to you.
+A repository holding simulations, notes and thoughts on computational physics.
 
 ## Usage
 
-FIXME
 
 ## License
 
