@@ -1,0 +1,8 @@
+#+title: Brachistochrone
+
+
+\begin{equation}
+\begin{aligned}
+(((1 / sqrt(19.62 (y0 - y(x)))) (1 / (sqrt(1 + (Dy(x))²) 2)) 2 + 2 Dy(x) (1 / sqrt(19.62 (y0 - y(x)))) (-1 / (sqrt(1 + (Dy(x))²) 2)²) 2 (1 / (sqrt(1 + (Dy(x))²) 2)) 2 Dy(x)) D²y(x) + 2 Dy(x) (1 / (sqrt(1 + (Dy(x))²) 2)) (-1 / (19.62 (y0 - y(x)))) (1 / (sqrt(19.62 (y0 - y(x))) 2)) 19.62 -1 Dy(x)) - ((- sqrt(1 + (Dy(x))²)) / (19.62 (y0 - y(x)))) (1 / (sqrt(19.62 (y0 - y(x))) 2)) 19.62 -1
+\end{aligned}
+\end{equation}

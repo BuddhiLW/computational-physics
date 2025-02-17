@@ -71,3 +71,41 @@
   (L-free-particle m)
   path t1 t2))
 ;; => 435.0
+
+
+;;
+(defn make-eta [nu t1 t2]
+  (fn [t]
+   (* (- t t1) (- t t2) (nu t))))
+
+(defn varied-free-particle-action [m q nu t1 t2]
+  (fn [eps]
+    (let [eta (make-eta nu t1 t2)]
+     (emmy.mechanics.lagrange/Lagrangian-action
+      (L-free-particle m)
+      (+ q (* eps eta))
+      t1 t2))))
+
+(def test-path
+ (let [x (fn [t] (+ (* 4 t) 7))
+       y (fn [t] (+ (* 3 t) 5))
+       z (fn [t] (+ (* 2 t) 1))
+       q (up x y z)
+       path (fn [t] (q t))]
+   path))
+
+((varied-free-particle-action 3 test-path (up sin cos square) 0.0 10.0)
+ 0.001)
+;; => 436.2912142857117
+
+(minimize
+ (varied-free-particle-action 3 test-path (up sin cos square) 0.0 10.0)
+ -2.0 10.0)
+;; => {:result 3.2822452909228465E-8,
+;;     :value 434.9999424332382,
+;;     :iterations 19,
+;;     :converged? true,
+;;     :fncalls 20}
+
+;; What different physical setups would make this variation non-zero?
+;; That is, action is not minimized in a straight path, but in a curved path.

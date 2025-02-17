@@ -1,0 +1,21 @@
+#+title: Chapter1
+
+* Exercise 1.4
+For a free particle an appropriate Lagrangian is:
+
+\begin{equation}
+\begin{aligned}
+L(t,x,v)=\dfrac{1}{2}mv^2
+\end{aligned}
+\end{equation}
+
+Suppose that x is the constant-velocity straight-line path of a free particle, such that $x_a = x(t_a)$ and $x_b=x(t_b)$. Show that the action on the
+solution path is:
+
+\begin{equation}
+\begin{aligned}
+\dfrac{m}{2}\dfrac{(x_b - x_a)^2}{t_b - t_a}
+\end{aligned}
+\end{equation}
+
+** Solution
